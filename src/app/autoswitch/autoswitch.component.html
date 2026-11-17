@@ -1,5 +1,7 @@
 <div class="body">
-  @if (dataModel.match().roundPhase === "LOBBY") {
+  @if (dataModel.match().roundPhase === "game_end") {
+    <app-team-breakdown></app-team-breakdown>
+  } @else if (dataModel.match().roundPhase === "LOBBY") {
     <app-agent-select-overlay></app-agent-select-overlay>
   } @else {
     <app-match-overlay></app-match-overlay>
